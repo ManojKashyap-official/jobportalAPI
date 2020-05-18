@@ -63,7 +63,7 @@ module.exports={
   delete:async function(req,res) {
     try {
       let params = req.allParams();
-      const results = await Company.destroy({id:req.params.id});
+      const results = await Company.destroy({id:params.id});
       return res.ok(results);
     } catch (err) {
       return res.serverError(err);
